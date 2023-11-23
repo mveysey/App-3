@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 5415640083858278616}
   - component: {fileID: 8973400695788160893}
   - component: {fileID: 6585136948046902199}
-  - component: {fileID: 68802664101660503}
+  - component: {fileID: -2019146134430247987}
   m_Layer: 0
   m_Name: Tile_Road_Solo_Corner
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &68802664101660503
+--- !u!65 &-2019146134430247987
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

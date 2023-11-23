@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 6075866848947241547}
   - component: {fileID: 7205208687854325230}
   - component: {fileID: 4907512274527025444}
-  - component: {fileID: 1701035895115248614}
+  - component: {fileID: -897294223391672305}
   m_Layer: 0
   m_Name: Tile_Corner
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1701035895115248614
+--- !u!65 &-897294223391672305
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

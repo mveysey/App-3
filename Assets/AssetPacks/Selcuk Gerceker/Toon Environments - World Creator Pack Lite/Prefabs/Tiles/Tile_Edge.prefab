@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 2524911385186326283}
   - component: {fileID: 1487755865394108590}
   - component: {fileID: 3693344608105868388}
-  - component: {fileID: 4559942798608547233}
+  - component: {fileID: 1096264586425478427}
   m_Layer: 0
   m_Name: Tile_Edge
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4559942798608547233
+--- !u!65 &1096264586425478427
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

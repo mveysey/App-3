@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 9205234682225048132}
   - component: {fileID: 5192733629543757281}
   - component: {fileID: 8067280574194041131}
-  - component: {fileID: -3373577464966890505}
+  - component: {fileID: 2454397913746414840}
   m_Layer: 0
   m_Name: Tile_Road_Edge_End_Solo
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &-3373577464966890505
+--- !u!65 &2454397913746414840
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

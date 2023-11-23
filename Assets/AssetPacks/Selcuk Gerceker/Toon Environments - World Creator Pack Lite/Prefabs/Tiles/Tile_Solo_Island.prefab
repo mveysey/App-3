@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 1939518569850068014}
   - component: {fileID: 3262108379738329995}
   - component: {fileID: 766070434397431617}
-  - component: {fileID: 7904998812005079801}
+  - component: {fileID: 9160071829964339889}
   m_Layer: 0
   m_Name: Tile_Solo_Island
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7904998812005079801
+--- !u!65 &9160071829964339889
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
