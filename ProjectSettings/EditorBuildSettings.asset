@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMahira.unity
+    path: Assets/Scenes/Menu.unity
     guid: ac78fa00834b12643b6d17c9ebf8f7e7
   - enabled: 1
     path: Assets/Scenes/Level1.1.unity
