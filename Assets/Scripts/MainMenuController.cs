@@ -21,7 +21,7 @@ public class MainMenuController : MonoBehaviour
 
     void StartOnClick()
     {
-        SceneManager.LoadScene("Maze");
+        SceneManager.LoadScene("Tutorial");
     }
 
     void ExitOnClick()
