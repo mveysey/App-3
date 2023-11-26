@@ -10,17 +10,7 @@ public class EndGame : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if (other.tag == "Player") {
-            //other.SendMessage("Completed");
-            complete = true;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
-        Invoke("loadEnd", 0.5f);
-    }
-
-    public void loadEnd() {
-        SceneManager.LoadScene(0);
-    }
-
-    public bool gameEnded() {
-        return complete;
     }
 }
