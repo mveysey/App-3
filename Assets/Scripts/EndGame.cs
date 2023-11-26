@@ -6,11 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class EndGame : MonoBehaviour
 {
-    private bool complete = false;
 
     private void OnTriggerEnter(Collider other) {
-        if (other.tag == "Player") {
+        if (other.tag == "Player") 
+        {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
+    }
+
+     public void LoadScene ()
+    {
+        SceneManager.LoadScene("TitleScreen");
+    }
+    
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

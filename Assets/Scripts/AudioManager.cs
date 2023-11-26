@@ -18,20 +18,19 @@ public class AudioManager : MonoBehaviour
     public AudioClip attack;
     public AudioClip hit;
 
-    private void Awake()
+   /* private void Awake()
     {
         DontDestroyOnLoad(gameObject);
-    }
+    }*/
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
        musicSource.clip = background;
        musicSource.Play();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void PlaySFX(AudioClip clip)
     {
-        
+        SFXSource.PlayOneShot(clip);
     }
 }

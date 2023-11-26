@@ -7,12 +7,14 @@ public class MainMenuController : MonoBehaviour
     public Button startButton;
     public Button levelsButton;
     public Button exitButton;
+   
 
     void Start()
     {
         Button start = startButton.GetComponent<Button>();
         Button exit = exitButton.GetComponent<Button>();
         Button levels = levelsButton.GetComponent<Button>();
+        
 
         start.onClick.AddListener(StartOnClick);
         exit.onClick.AddListener(ExitOnClick);

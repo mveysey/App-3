@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+﻿﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController: MonoBehaviour
@@ -27,10 +27,15 @@ public class PlayerController: MonoBehaviour
 
     private List<Collider> m_collisions = new List<Collider>();
 
+    //AudioManager audioManager;
+    //AudioSource m_AudioSource;
+
     private void Awake()
     {
         if (!m_animator) { gameObject.GetComponent<Animator>(); }
         if (!m_rigidBody) { gameObject.GetComponent<Animator>(); }
+        //audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        //m_AudioSource = GetComponent<AudioSource> ();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -121,6 +126,8 @@ public class PlayerController: MonoBehaviour
         bool isWalking = hasHorizontalInput || hasVerticalInput;
         m_animator.SetBool("isWalking", isWalking);
 
+        
+
         m_currentV = Mathf.Lerp(m_currentV, v, Time.deltaTime * m_interpolation);
         m_currentH = Mathf.Lerp(m_currentH, h, Time.deltaTime * m_interpolation);
 
@@ -137,6 +144,7 @@ public class PlayerController: MonoBehaviour
             transform.rotation = Quaternion.LookRotation(m_currentDirection);
             transform.position += m_currentDirection * m_moveSpeed * Time.deltaTime;
 
+            
             //m_animator.SetFloat("MoveSpeed", direction.magnitude);
         }
 
