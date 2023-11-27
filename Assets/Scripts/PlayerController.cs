@@ -17,6 +17,7 @@ public class PlayerController: MonoBehaviour
 
 
     private bool m_wasGrounded;
+    private bool isAttacking;
     private Vector3 m_currentDirection = Vector3.zero;
 
     private float m_jumpTimeStamp = 0;
@@ -99,6 +100,19 @@ public class PlayerController: MonoBehaviour
         {
             m_jumpInput = true;
         }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Debug.Log("mouse down");
+            isAttacking = true;
+            //m_animator.SetBool("isAttacking", isAttacking);
+        }
+        else
+        {
+            isAttacking = false;
+            //m_animator.SetBool("isAttacking", isAttacking);
+        }
+        m_animator.SetBool("isAttacking", isAttacking);
     }
 
     private void FixedUpdate()
@@ -128,6 +142,10 @@ public class PlayerController: MonoBehaviour
 
         
 
+        //isAttacking = false;
+        //m_animator.SetBool("isAttacking", isAttacking);
+
+
         m_currentV = Mathf.Lerp(m_currentV, v, Time.deltaTime * m_interpolation);
         m_currentH = Mathf.Lerp(m_currentH, h, Time.deltaTime * m_interpolation);
 
@@ -143,9 +161,6 @@ public class PlayerController: MonoBehaviour
 
             transform.rotation = Quaternion.LookRotation(m_currentDirection);
             transform.position += m_currentDirection * m_moveSpeed * Time.deltaTime;
-
-            
-            //m_animator.SetFloat("MoveSpeed", direction.magnitude);
         }
 
         JumpingAndLanding();
@@ -160,15 +175,5 @@ public class PlayerController: MonoBehaviour
             m_jumpTimeStamp = Time.time;
             m_rigidBody.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
         }
-
-        //if (!m_wasGrounded && m_isGrounded)
-        //{
-        //    m_animator.SetTrigger("Land");
-        //}
-
-        //if (!m_isGrounded && m_wasGrounded)
-        //{
-        //    m_animator.SetTrigger("Jump");
-        //}
     }
 }
