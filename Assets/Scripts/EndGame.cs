@@ -3,22 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 public class EndGame : MonoBehaviour
 {
+    [SerializeField] private AudioSource endGameEffect;
 
-    private void OnTriggerEnter(Collider other) {
-        if (other.tag == "Player") 
+    [SerializeField] private float delay = 1.0f; 
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            endGameEffect.Play();
+            Invoke("LoadNextScene", delay);
         }
     }
 
-     public void LoadScene ()
+    private void LoadNextScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void LoadTitleScreen()
     {
         SceneManager.LoadScene("TitleScreen");
     }
-    
+
     public void QuitGame()
     {
         Application.Quit();
