@@ -17,7 +17,7 @@ public class PlayerController: MonoBehaviour
 
 
     private bool m_wasGrounded;
-    private bool isAttacking;
+    public static bool isAttacking;
     private Vector3 m_currentDirection = Vector3.zero;
 
     private float m_jumpTimeStamp = 0;
@@ -103,14 +103,11 @@ public class PlayerController: MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("mouse down");
             isAttacking = true;
-            //m_animator.SetBool("isAttacking", isAttacking);
         }
         else
         {
             isAttacking = false;
-            //m_animator.SetBool("isAttacking", isAttacking);
         }
         m_animator.SetBool("isAttacking", isAttacking);
     }
