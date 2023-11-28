@@ -28,6 +28,7 @@ public class FirstEnemyTutorialController : MonoBehaviour
     void ContinueGame()
     {
         firstEnemyCanvas.SetActive(false);
+        gameObject.SetActive(false);
         Time.timeScale = 1;
     }
 }
