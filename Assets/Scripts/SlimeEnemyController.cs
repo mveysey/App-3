@@ -4,45 +4,44 @@ using UnityEngine;
 
 public class SlimeEnemyController : MonoBehaviour
 {
-    // Check if slime has been hit
-    // trigger hit animation
-    // if 3 hits, trigger die animation
-
+    Collider m_Collider;
     private int lives = 3;
-    private bool isHit = false;
-
     public Animator m_animator = null;
 
     private void Awake()
     {
         if (!m_animator) { gameObject.GetComponent<Animator>(); }
+        m_Collider = GetComponent<Collider>();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private IEnumerator OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Sword") && PlayerController.isAttacking == true)
+        if (other.CompareTag("Sword") && lives > 0)
         {
-            Debug.Log("hi");
-            isHit = true;
-            m_animator.SetBool("isHit", isHit);
-            lives -= 1;
-        }
-    }
+            m_Collider.enabled = !m_Collider.enabled;
 
-    private void OnTriggerExit(Collider other)
-    {
-        isHit = false;
-        m_animator.SetBool("isHit", isHit);
+            m_animator.SetTrigger("hit");
+            m_animator.SetTrigger("dizzy");
+
+            lives -= 1;
+
+            yield return StartCoroutine(Timeout());
+        }
     }
 
     void Update()
     {
-        if(lives <= 0)
+        if (lives == 0)
         {
             m_animator.SetBool("isDead", true);
-            Debug.Log("oh my god mrs keisha is dead");
-        }
 
-        
+            m_Collider.isTrigger = true;
+        }
+    }
+
+    IEnumerator Timeout()
+    {
+        yield return new WaitForSeconds(2);
+        m_Collider.enabled = !m_Collider.enabled;
     }
 }
