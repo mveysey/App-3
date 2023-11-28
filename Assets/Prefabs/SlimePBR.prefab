@@ -427,6 +427,7 @@ GameObject:
   - component: {fileID: 2634392665313590394}
   - component: {fileID: 7829620543983251673}
   - component: {fileID: 6568368945809892346}
+  - component: {fileID: 6975130403112641738}
   m_Layer: 0
   m_Name: SlimePBR
   m_TagString: Untagged
@@ -444,7 +445,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4065624273618060}
@@ -484,7 +485,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dce5b57429b434d619bba1a25cb7bda1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 0}
   m_animator: {fileID: 95457531584545886}
 --- !u!136 &7829620543983251673
 CapsuleCollider:
@@ -536,3 +536,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &6975130403112641738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1931298151966786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c91391e3722e45fda2a27881cb8a8f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waypoints: []
+  speed: 0

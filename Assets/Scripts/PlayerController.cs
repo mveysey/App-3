@@ -137,12 +137,6 @@ public class PlayerController: MonoBehaviour
         bool isWalking = hasHorizontalInput || hasVerticalInput;
         m_animator.SetBool("isWalking", isWalking);
 
-        
-
-        //isAttacking = false;
-        //m_animator.SetBool("isAttacking", isAttacking);
-
-
         m_currentV = Mathf.Lerp(m_currentV, v, Time.deltaTime * m_interpolation);
         m_currentH = Mathf.Lerp(m_currentH, h, Time.deltaTime * m_interpolation);
 
