@@ -8,15 +8,6 @@ public class AudioManager : MonoBehaviour
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource SFXSource;
 
-    [Header("Audio Clip")]
-    public AudioClip background;
-    public AudioClip death;
-    public AudioClip falling;
-    public AudioClip checkpoint;
-    public AudioClip walk;
-    public AudioClip jump;
-    public AudioClip attack;
-    public AudioClip hit;
 
    /* private void Awake()
     {
@@ -27,10 +18,5 @@ public class AudioManager : MonoBehaviour
     {
        musicSource.clip = background;
        musicSource.Play();
-    }
-
-    public void PlaySFX(AudioClip clip)
-    {
-        SFXSource.PlayOneShot(clip);
     }
 }
