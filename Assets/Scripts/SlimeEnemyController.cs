@@ -5,7 +5,7 @@ using UnityEngine;
 public class SlimeEnemyController : MonoBehaviour
 {
     Collider m_Collider;
-    private int lives = 3;
+    private static int lives = 3;
     public Animator m_animator = null;
 
     private void Awake()
@@ -37,6 +37,11 @@ public class SlimeEnemyController : MonoBehaviour
 
             m_Collider.isTrigger = true;
         }
+    }
+
+    public static int getLives()
+    {
+        return SlimeEnemyController.lives;
     }
 
     IEnumerator Timeout()
