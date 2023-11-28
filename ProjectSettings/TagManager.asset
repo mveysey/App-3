@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - Audio
   - Sword
+  - FirstEnemy
   layers:
   - Default
   - TransparentFX
