@@ -8,6 +8,7 @@ TagManager:
   - Audio
   - Sword
   - FirstEnemy
+  - Void
   layers:
   - Default
   - TransparentFX
