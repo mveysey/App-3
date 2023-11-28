@@ -8,8 +8,6 @@ public class PlayerController: MonoBehaviour
 
     [SerializeField] private Animator m_animator = null;
     [SerializeField] private Rigidbody m_rigidBody = null;
-    [SerializeField] private AudioSource jumpSoundEffect;
-    //[SerializeField] private AudioSource m_jumping = null;
 
     private float m_currentV = 0;
     private float m_currentH = 0;
@@ -25,7 +23,6 @@ public class PlayerController: MonoBehaviour
     private float m_jumpTimeStamp = 0;
     private float m_minJumpInterval = 0.5f;
     private bool m_jumpInput = false;
-    private bool m_isJumping = false;
 
     private bool m_isGrounded;
 
@@ -38,10 +35,8 @@ public class PlayerController: MonoBehaviour
     {
         if (!m_animator) { gameObject.GetComponent<Animator>(); }
         if (!m_rigidBody) { gameObject.GetComponent<Animator>(); }
-        //if (!audioManager) { audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>(); }
-
-        //if (!m_AudioSource) { gameObject.GetComponent<AudioSource>(); }
-        //m_walking = GetComponent<AudioSource> ();
+        //audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+        //m_AudioSource = GetComponent<AudioSource> ();
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -56,7 +51,6 @@ public class PlayerController: MonoBehaviour
                     m_collisions.Add(collision.collider);
                 }
                 m_isGrounded = true;
-                m_isJumping = false;
             }
         }
     }
@@ -104,10 +98,8 @@ public class PlayerController: MonoBehaviour
     {
         if (!m_jumpInput && Input.GetKey(KeyCode.Space))
         {
-            jumpSoundEffect.Play();
             m_jumpInput = true;
-
-       }
+        }
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -140,25 +132,12 @@ public class PlayerController: MonoBehaviour
             h *= m_walkScale;
         }
 
-            /*if(!m_isJumping)
-            {
-                 audioManager.PlaySFX(audioManager.walk);
-            }
-    
-        }
-        else
-        {
-            if (!m_isJumping)
-            {
-                audioManager.StopSFX();
-            }
-        }*/
-
         bool hasHorizontalInput = !Mathf.Approximately(h, 0f);
         bool hasVerticalInput = !Mathf.Approximately(v, 0f);
         bool isWalking = hasHorizontalInput || hasVerticalInput;
         m_animator.SetBool("isWalking", isWalking);
 
+        
 
         //isAttacking = false;
         //m_animator.SetBool("isAttacking", isAttacking);
@@ -175,8 +154,6 @@ public class PlayerController: MonoBehaviour
 
         if (direction != Vector3.zero)
         {
-            //audioManager.PlaySFX(audioManager.jump);
-
             m_currentDirection = Vector3.Slerp(m_currentDirection, direction, Time.deltaTime * m_interpolation);
 
             transform.rotation = Quaternion.LookRotation(m_currentDirection);
@@ -192,12 +169,8 @@ public class PlayerController: MonoBehaviour
 
         if (jumpCooldownOver && m_isGrounded && m_jumpInput)
         {
-            //audioManager.StopSFX(); // Stop walking audio when jumping
-            //audioManager.PlaySFX(audioManager.jump);
             m_jumpTimeStamp = Time.time;
-            //m_isJumping = true;
             m_rigidBody.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
         }
     }
 }
-    
