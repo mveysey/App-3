@@ -9,6 +9,7 @@ TagManager:
   - Sword
   - FirstEnemy
   - Void
+  - Enemy
   layers:
   - Default
   - TransparentFX
