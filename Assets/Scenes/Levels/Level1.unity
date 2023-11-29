@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.7302244, g: 0.7889752, b: 0.8498586, a: 1}
+  m_IndirectSpecularColor: {r: 0.73023987, g: 0.788982, b: 0.8498601, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11295,6 +11295,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4047972025199878, guid: 928a1377c1cd4515b208fef3a396b8ea, type: 3}
   m_PrefabInstance: {fileID: 843028372}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &468608462 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95457531584545886, guid: 928a1377c1cd4515b208fef3a396b8ea, type: 3}
+  m_PrefabInstance: {fileID: 843028372}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &473664527 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1939518569850068014, guid: 29e2a1de97b4cbf48bb160e0a3d7707b, type: 3}
@@ -19340,6 +19345,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6975130403112641738, guid: 928a1377c1cd4515b208fef3a396b8ea, type: 3}
+      propertyPath: m_animator
+      value: 
+      objectReference: {fileID: 468608462}
+    - target: {fileID: 6975130403112641738, guid: 928a1377c1cd4515b208fef3a396b8ea, type: 3}
       propertyPath: waypoints.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -25681,6 +25690,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8781548920686103594, guid: e519c410b01abf0478e3344b27e06822, type: 3}
   m_PrefabInstance: {fileID: 1170889173}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1172838230 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 95457531584545886, guid: 928a1377c1cd4515b208fef3a396b8ea, type: 3}
+  m_PrefabInstance: {fileID: 1814346377}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1177926034
 PrefabInstance:
@@ -40737,6 +40751,10 @@ PrefabInstance:
       propertyPath: speed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6975130403112641738, guid: 928a1377c1cd4515b208fef3a396b8ea, type: 3}
+      propertyPath: m_animator
+      value: 
+      objectReference: {fileID: 1172838230}
     - target: {fileID: 6975130403112641738, guid: 928a1377c1cd4515b208fef3a396b8ea, type: 3}
       propertyPath: waypoints.Array.size
       value: 2

@@ -7,6 +7,7 @@ public class EnemyTargetPlayer : MonoBehaviour
 {
     public Transform player;
     NavMeshAgent agent;
+    public Animator m_animator = null;
 
     private void Start()
     {
@@ -15,7 +16,7 @@ public class EnemyTargetPlayer : MonoBehaviour
 
     private void Update()
     {
-        if (SpikeEnemyController.GetLives() <= 0)
+        if (AnimatorIsPlaying("Die"))
         {
             agent.SetDestination(transform.position);
         }
@@ -23,5 +24,10 @@ public class EnemyTargetPlayer : MonoBehaviour
         {
             agent.SetDestination(player.position);
         }
+    }
+
+    bool AnimatorIsPlaying(string stateName)
+    {
+        return m_animator.GetCurrentAnimatorStateInfo(0).IsName(stateName);
     }
 }

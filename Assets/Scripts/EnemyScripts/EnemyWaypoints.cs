@@ -8,10 +8,11 @@ public class EnemyWaypoints : MonoBehaviour
     private int current = 0;
     public float speed = 3f;
     private float waypointRadius = 1;
+    public Animator m_animator = null;
 
     private void Update()
     {
-        if (SlimeEnemyController.GetLives() <= 0)
+        if (AnimatorIsPlaying("Die"))
         {
             transform.position = Vector3.MoveTowards(transform.position, transform.position, 0);
         }
@@ -29,5 +30,10 @@ public class EnemyWaypoints : MonoBehaviour
 
             transform.position = Vector3.MoveTowards(transform.position, waypoints[current].transform.position, Time.deltaTime * speed);
         }
+    }
+
+    bool AnimatorIsPlaying(string stateName)
+    {
+        return m_animator.GetCurrentAnimatorStateInfo(0).IsName(stateName);
     }
 }

@@ -1,11 +1,10 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SlimeEnemyController : MonoBehaviour
 {
     Collider m_Collider;
-    private static int lives = 3;
+    private int lives = 3;
     public Animator m_animator = null;
 
     private void Awake()
@@ -37,11 +36,6 @@ public class SlimeEnemyController : MonoBehaviour
 
             m_Collider.isTrigger = true;
         }
-    }
-
-    public static int GetLives()
-    {
-        return lives;
     }
 
     IEnumerator Timeout()

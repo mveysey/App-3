@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpikeEnemyController : MonoBehaviour
 {
     Collider m_Collider;
-    private static int lives = 1;
+    private int lives = 1;
     public Animator m_animator = null;
 
     private void Awake()
@@ -33,10 +33,5 @@ public class SpikeEnemyController : MonoBehaviour
 
             m_Collider.isTrigger = true;
         }
-    }
-
-    public static int GetLives()
-    {
-        return lives;
     }
 }

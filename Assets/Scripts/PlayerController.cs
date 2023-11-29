@@ -47,7 +47,8 @@ public class PlayerController: MonoBehaviour
             SlimeEnemyController enemy = other.GetComponent<SlimeEnemyController>();
 
             // check if enemy is alive 
-            if (enemy != null && SlimeEnemyController.GetLives() > 0)
+            //if (enemy != null && SlimeEnemyController.GetLives() > 0)
+            if(enemy != null)
             {
                 // if enemy is alive and there loose live 
                 LivesManager livesManager = FindObjectOfType<LivesManager>();
