@@ -1,46 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class LivesManager : MonoBehaviour
 {
     private int lives = 10;
-    public GameObject[] lifeIcons; // life icons 
-
+    public TextMeshProUGUI livesText; // reference to the UI text displaying lives
 
     private string livesKey = "PlayerLives";
 
     private void Start()
     {
-
         LoadPlayerLives();
+        UpdateLifeText();
     }
 
     private void SavePlayerLives()
     {
-      
         PlayerPrefs.SetInt(livesKey, lives);
         PlayerPrefs.Save();
     }
 
     private void LoadPlayerLives()
     {
-        
         if (PlayerPrefs.HasKey(livesKey))
         {
             lives = PlayerPrefs.GetInt(livesKey);
         }
-
-        
-        UpdateLifeIcons();
+        UpdateLifeText();
     }
 
-    private void UpdateLifeIcons()
+    private void UpdateLifeText()
     {
-        
-        for (int i = 0; i < lifeIcons.Length; i++)
+        if (livesText != null)
         {
-            lifeIcons[i].SetActive(i < lives);
+            livesText.text = "x" + lives;
         }
     }
 
@@ -53,11 +48,10 @@ public class LivesManager : MonoBehaviour
     {
         if (lives > 0)
         {
-            lifeIcons[lives - 1].SetActive(false);
             lives--;
 
-            
-            SavePlayerLives(); // save to playerprefs
+            UpdateLifeText();
+            SavePlayerLives(); // save to PlayerPrefs
         }
 
         if (lives == 0)
@@ -68,21 +62,14 @@ public class LivesManager : MonoBehaviour
 
     public void GainLife()
     {
-        if (lives <= 10)
+        if (lives < 10)
         {
-            lifeIcons[lives + 1].SetActive(true);
             lives++;
 
-
-            SavePlayerLives(); // save to playerprefs
+            UpdateLifeText();
+            SavePlayerLives(); // save to PlayerPrefs
         }
     }
 
-    public void HideHeartIcon(int index)
-    {
-        if (index >= 0 && index < lifeIcons.Length)
-        {
-            lifeIcons[index].SetActive(false);
-        }
-    }
+   
 }
