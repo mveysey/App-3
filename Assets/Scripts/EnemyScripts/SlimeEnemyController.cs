@@ -13,6 +13,21 @@ public class SlimeEnemyController : MonoBehaviour
         m_Collider = GetComponent<Collider>();
     }
 
+    //private IEnumerator OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.CompareTag("Sword") && lives > 0)
+    //    {
+    //        m_Collider.enabled = !m_Collider.enabled;
+
+    //        m_animator.SetTrigger("hit");
+    //        m_animator.SetTrigger("dizzy");
+
+    //        lives -= 1;
+
+    //        yield return StartCoroutine(Timeout());
+    //    }
+    //}
+
     private IEnumerator OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Sword") && lives > 0)

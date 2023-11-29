@@ -39,29 +39,26 @@ public class PlayerController: MonoBehaviour
         //m_AudioSource = GetComponent<AudioSource> ();
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        // touch enemy 
-        if (other.CompareTag("Enemy"))
-        {
-            SlimeEnemyController enemy = other.GetComponent<SlimeEnemyController>();
+    //private void OnTriggerEnter(Collider other)
+    //{
+    //    //// touch enemy 
+    //    //if (other.CompareTag("Enemy"))
+    //    //{
+    //    //    SlimeEnemyController enemy = other.GetComponent<SlimeEnemyController>();
 
-            // check if enemy is alive 
-            //if (enemy != null && SlimeEnemyController.GetLives() > 0)
-            if(enemy != null)
-            {
-                // if enemy is alive and there loose live 
-                LivesManager livesManager = FindObjectOfType<LivesManager>();
-                if (livesManager != null)
-                {
-                    livesManager.LoseLife();
-                }
-            }
-        }
-    }
-
-
-  
+    //    //    // check if enemy is alive 
+    //    //    //if (enemy != null && SlimeEnemyController.GetLives() > 0)
+    //    //    if (enemy != null)
+    //    //    {
+    //    //        // if enemy is alive and there loose live 
+    //    //        LivesManager livesManager = FindObjectOfType<LivesManager>();
+    //    //        if (livesManager != null)
+    //    //        {
+    //    //            livesManager.LoseLife();
+    //    //        }
+    //    //    }
+    //    //}
+    //}
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -75,6 +72,24 @@ public class PlayerController: MonoBehaviour
                     m_collisions.Add(collision.collider);
                 }
                 m_isGrounded = true;
+            }
+        }
+
+        // touch enemy 
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            SlimeEnemyController enemy = collision.gameObject.GetComponent<SlimeEnemyController>();
+
+            // check if enemy is alive 
+            //if (enemy != null && SlimeEnemyController.GetLives() > 0)
+            if (enemy != null)
+            {
+                // if enemy is alive and there loose live 
+                LivesManager livesManager = FindObjectOfType<LivesManager>();
+                if (livesManager != null)
+                {
+                    livesManager.LoseLife();
+                }
             }
         }
     }
