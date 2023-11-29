@@ -39,6 +39,20 @@ public class PlayerController: MonoBehaviour
         //m_AudioSource = GetComponent<AudioSource> ();
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        // player in contact with enemmy 
+        if (other.CompareTag("Enemy"))
+        {
+            // use looseLife method 
+            LivesManager livesManager = FindObjectOfType<LivesManager>();
+            if (livesManager != null)
+            {
+                livesManager.LoseLife();
+            }
+        }
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         ContactPoint[] contactPoints = collision.contacts;
