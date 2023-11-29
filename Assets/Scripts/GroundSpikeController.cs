@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class GroundSpikeController : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             // lose a life
         }
