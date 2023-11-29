@@ -41,17 +41,26 @@ public class PlayerController: MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // player in contact with enemmy 
+        // touch enemy 
         if (other.CompareTag("Enemy"))
         {
-            // use looseLife method 
-            LivesManager livesManager = FindObjectOfType<LivesManager>();
-            if (livesManager != null)
+            SlimeEnemyController enemy = other.GetComponent<SlimeEnemyController>();
+
+            // check if enemy is alive 
+            if (enemy != null && SlimeEnemyController.GetLives() > 0)
             {
-                livesManager.LoseLife();
+                // if enemy is alive and there loose live 
+                LivesManager livesManager = FindObjectOfType<LivesManager>();
+                if (livesManager != null)
+                {
+                    livesManager.LoseLife();
+                }
             }
         }
     }
+
+
+  
 
     private void OnCollisionEnter(Collision collision)
     {
