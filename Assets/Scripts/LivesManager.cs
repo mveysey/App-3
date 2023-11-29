@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,4 +27,13 @@ public class LivesManager : MonoBehaviour
 
         }
     }
+
+    public void HideHeartIcon(int index)
+    {
+        if (index >= 0 && index < lifeIcons.Length)
+        {
+            lifeIcons[index].SetActive(false);
+        }
+    }
 }
+
