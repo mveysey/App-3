@@ -44014,17 +44014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90b4cbc423aea724b9b4c71c76ddcdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeIcons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  lifeIcons: []
 --- !u!1001 &2023793607
 PrefabInstance:
   m_ObjectHideFlags: 0

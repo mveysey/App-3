@@ -65,7 +65,7 @@ public class PlayerController: MonoBehaviour
             }
         }
 
-        if (collision.gameObject.CompareTag("groundSpike"))
+        if (collision.gameObject.CompareTag("GroundSpike"))
         {
             LivesManager livesManager = FindObjectOfType<LivesManager>();
             if (livesManager != null)
