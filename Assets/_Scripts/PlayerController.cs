@@ -170,7 +170,7 @@ public class PlayerController: MonoBehaviour
 
         bool hasHorizontalInput = !Mathf.Approximately(h, 0f);
         bool hasVerticalInput = !Mathf.Approximately(v, 0f);
-        bool isWalking = hasHorizontalInput || hasVerticalInput;
+        bool isWalking = (hasHorizontalInput || hasVerticalInput) && !m_jumpInput;
         m_animator.SetBool("isWalking", isWalking);
 
         m_currentV = Mathf.Lerp(m_currentV, v, Time.deltaTime * m_interpolation);
