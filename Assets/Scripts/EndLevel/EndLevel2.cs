@@ -7,7 +7,7 @@ public class EndLevel2 : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Level3");
+            SceneManager.LoadScene("Level2Complete");
         }
     }
 }
