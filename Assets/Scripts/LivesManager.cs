@@ -6,6 +6,20 @@ public class LivesManager : MonoBehaviour
 {
     private int lives = 10;
     public GameObject[] lifeIcons; // life icons 
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject); // to keep the lives in next level 
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
     public int GetLives()
     {
         return lives;
