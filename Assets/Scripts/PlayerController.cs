@@ -28,6 +28,10 @@ public class PlayerController: MonoBehaviour
 
     private List<Collider> m_collisions = new List<Collider>();
 
+    public AudioSource SFXaudioSource;
+    public AudioClip jump;
+    public AudioClip walk;
+
     //AudioManager audioManager;
     //AudioSource m_AudioSource;
 
@@ -98,6 +102,7 @@ public class PlayerController: MonoBehaviour
     {
         if (!m_jumpInput && Input.GetKey(KeyCode.Space))
         {
+            SFXaudioSource.PlayOneShot(jump);
             m_jumpInput = true;
         }
 
@@ -136,6 +141,10 @@ public class PlayerController: MonoBehaviour
         bool hasVerticalInput = !Mathf.Approximately(v, 0f);
         bool isWalking = hasHorizontalInput || hasVerticalInput;
         m_animator.SetBool("isWalking", isWalking);
+        if (isWalking)
+        {
+            SFXaudioSource.clip = walk;
+        }
 
         m_currentV = Mathf.Lerp(m_currentV, v, Time.deltaTime * m_interpolation);
         m_currentH = Mathf.Lerp(m_currentH, h, Time.deltaTime * m_interpolation);
