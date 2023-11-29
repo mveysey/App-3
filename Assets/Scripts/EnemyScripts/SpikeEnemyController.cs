@@ -17,7 +17,7 @@ public class SpikeEnemyController : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Sword") && lives > 0)
-        { 
+        {
             m_animator.SetTrigger("hit");
             m_animator.SetTrigger("dizzy");
 
