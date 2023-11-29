@@ -67,7 +67,7 @@ public class PlayerController: MonoBehaviour
                 LivesManager livesManager = FindObjectOfType<LivesManager>();
                 if (livesManager != null)
                 {
-                    livesManager.GainLife();
+                    livesManager.LoseLife();
                 }
             }
         }
