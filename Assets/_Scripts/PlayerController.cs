@@ -57,18 +57,11 @@ public class PlayerController: MonoBehaviour
         // touch enemy 
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            SlimeEnemyController enemy = collision.gameObject.GetComponent<SlimeEnemyController>();
-
-            // check if enemy is alive 
-            //if (enemy != null && SlimeEnemyController.GetLives() > 0)
-            if (enemy != null)
+            // if enemy is alive and there loose live 
+            LivesManager livesManager = FindObjectOfType<LivesManager>();
+            if (livesManager != null)
             {
-                // if enemy is alive and there loose live 
-                LivesManager livesManager = FindObjectOfType<LivesManager>();
-                if (livesManager != null)
-                {
-                    livesManager.LoseLife();
-                }
+                livesManager.LoseLife();
             }
         }
 
