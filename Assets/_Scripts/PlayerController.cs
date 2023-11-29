@@ -88,8 +88,26 @@ public class PlayerController: MonoBehaviour
                 LivesManager livesManager = FindObjectOfType<LivesManager>();
                 if (livesManager != null)
                 {
-                    livesManager.LoseLife();
+                    livesManager.GainLife();
                 }
+            }
+        }
+
+        if (collision.gameObject.CompareTag("GroundSpike"))
+        {
+            LivesManager livesManager = FindObjectOfType<LivesManager>();
+            if (livesManager != null)
+            {
+                livesManager.LoseLife();
+            }
+        }
+
+        if (collision.gameObject.CompareTag("SpikeTrap"))
+        {
+            LivesManager livesManager = FindObjectOfType<LivesManager>();
+            if (livesManager != null)
+            {
+                livesManager.LoseLife();
             }
         }
     }

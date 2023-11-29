@@ -66,6 +66,18 @@ public class LivesManager : MonoBehaviour
         }
     }
 
+    public void GainLife()
+    {
+        if (lives <= 10)
+        {
+            lifeIcons[lives + 1].SetActive(true);
+            lives++;
+
+
+            SavePlayerLives(); // save to playerprefs
+        }
+    }
+
     public void HideHeartIcon(int index)
     {
         if (index >= 0 && index < lifeIcons.Length)

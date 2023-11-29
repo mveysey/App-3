@@ -10,6 +10,8 @@ TagManager:
   - FirstEnemy
   - Void
   - Enemy
+  - SpikeTrap
+  - GroundSpike
   layers:
   - Default
   - TransparentFX

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4593186208367497401}
   m_Layer: 0
   m_Name: BlockSpike01D
-  m_TagString: Untagged
+  m_TagString: GroundSpike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
