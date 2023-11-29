@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlimeEnemyController : MonoBehaviour
+public class SpikeEnemyController : MonoBehaviour
 {
     Collider m_Collider;
-    private static int lives = 3;
+    private static int lives = 1;
     public Animator m_animator = null;
 
     private void Awake()
@@ -14,18 +14,14 @@ public class SlimeEnemyController : MonoBehaviour
         m_Collider = GetComponent<Collider>();
     }
 
-    private IEnumerator OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Sword") && lives > 0)
-        {
-            m_Collider.enabled = !m_Collider.enabled;
-
+        { 
             m_animator.SetTrigger("hit");
             m_animator.SetTrigger("dizzy");
 
             lives -= 1;
-
-            yield return StartCoroutine(Timeout());
         }
     }
 
@@ -42,11 +38,5 @@ public class SlimeEnemyController : MonoBehaviour
     public static int GetLives()
     {
         return lives;
-    }
-
-    IEnumerator Timeout()
-    {
-        yield return new WaitForSeconds(2);
-        m_Collider.enabled = !m_Collider.enabled;
     }
 }

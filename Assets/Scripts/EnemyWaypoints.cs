@@ -11,7 +11,7 @@ public class EnemyWaypoints : MonoBehaviour
 
     private void Update()
     {
-        if (SlimeEnemyController.getLives() <= 0)
+        if (SlimeEnemyController.GetLives() <= 0)
         {
             transform.position = Vector3.MoveTowards(transform.position, transform.position, 0);
         }
