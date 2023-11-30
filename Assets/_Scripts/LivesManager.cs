@@ -54,8 +54,10 @@ public class LivesManager : MonoBehaviour
             SavePlayerLives(); // save to PlayerPrefs
         }
 
+        // have another condition 
         if (lives == 0)
         {
+            GameOver();
             Debug.Log("Game Over");
         }
     }
@@ -71,5 +73,26 @@ public class LivesManager : MonoBehaviour
         }
     }
 
-   
+  
+  
+    private void ResetLives()
+    {
+        lives = 10;
+        UpdateLifeText();
+
+
+        PlayerPrefs.DeleteAll(); 
+        
+
+        PlayerPrefs.SetInt(livesKey, 10);
+        PlayerPrefs.Save();
+    }
+
+    private void GameOver()
+    {
+        Debug.Log("Game Over");
+       
+         ResetLives();
+    }
+
 }
