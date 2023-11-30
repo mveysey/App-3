@@ -6,10 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class EndGame : MonoBehaviour
 {
+   
 
     private void OnTriggerEnter(Collider other) {
         if (other.tag == "Player") 
         {
+            LivesManager livesManager = FindObjectOfType<LivesManager>();
+            if (livesManager != null)
+            {
+                livesManager.ResetLives();
+            }
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }

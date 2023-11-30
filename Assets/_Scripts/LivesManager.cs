@@ -100,7 +100,7 @@ public class LivesManager : MonoBehaviour
 
   
   
-    private void ResetLives()
+    public void ResetLives()
     {
         lives = 10;
         UpdateLifeText();
@@ -113,7 +113,8 @@ public class LivesManager : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    private void GameOver()
+    // call this code somewhere in the code for game ending 
+    public void GameOver()
     {
         Debug.Log("Game Over");
        
