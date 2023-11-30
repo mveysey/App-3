@@ -31366,7 +31366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinsText: {fileID: 1346553476}
-  livesManager: {fileID: 0}
+  livesManager: {fileID: 882520248}
 --- !u!114 &1176630648
 MonoBehaviour:
   m_ObjectHideFlags: 0

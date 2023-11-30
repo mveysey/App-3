@@ -54,10 +54,10 @@ public class CoinManager : MonoBehaviour
         UpdateCoinsText();
         SavePlayerCoins();
 
-        // check if player has 10 coins, if yes then gain 1 live 
+        // see if player has 1o coins, if yes gain 1 live 
         if (coins % 10 == 0)
         {
-            // call gainLife in the code 
+            
             if (livesManager != null)
             {
                 livesManager.GainLife();
@@ -72,7 +72,7 @@ public class CoinManager : MonoBehaviour
 
     
 
-    private void ResetCoins()
+    public void ResetCoins()
     {
         coins = 0;
         UpdateCoinsText();
@@ -86,7 +86,7 @@ public class CoinManager : MonoBehaviour
     {
         Debug.Log("Game Over");
 
-        // reset coins to 0 again when game ends 
+        
         ResetCoins();
     }
 }
