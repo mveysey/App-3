@@ -9,6 +9,7 @@ public class CoinManager : MonoBehaviour
     public TextMeshProUGUI coinsText; // coin text 
 
     private string coinsKey = "PlayerCoins";
+    public LivesManager livesManager; // reference to lives manager 
 
     private void Start()
     {
@@ -51,7 +52,22 @@ public class CoinManager : MonoBehaviour
         coins++;
         // save to playerprefs 
         UpdateCoinsText();
-        SavePlayerCoins(); 
+        SavePlayerCoins();
+
+        // check if player has 10 coins, if yes then gain 1 live 
+        if (coins % 10 == 0)
+        {
+            // call gainLife in the code 
+            if (livesManager != null)
+            {
+                livesManager.GainLife();
+            }
+
+            // reset the coins to zero 
+            coins = 0;
+            UpdateCoinsText();
+            SavePlayerCoins();
+        }
     }
 
     
