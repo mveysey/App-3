@@ -54,10 +54,10 @@ public class PlayerController: MonoBehaviour
             }
         }
 
-        // touch enemy 
+        // touch slime enemy loose 1 life
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            // if enemy is alive and there loose live 
+            // find lives manager object in the game 
             LivesManager livesManager = FindObjectOfType<LivesManager>();
             if (livesManager != null)
             {
@@ -65,6 +65,16 @@ public class PlayerController: MonoBehaviour
             }
         }
 
+        // touch spike enemy looke 2 lives 
+        if (collision.gameObject.CompareTag("SpikeEnemy"))
+        {
+            // find lives manager object there 
+            LivesManager livesManager = FindObjectOfType<LivesManager>();
+            if (livesManager != null)
+            {
+                livesManager.LoseTwoLives();
+            }
+        }
         if (collision.gameObject.CompareTag("GroundSpike"))
         {
             LivesManager livesManager = FindObjectOfType<LivesManager>();

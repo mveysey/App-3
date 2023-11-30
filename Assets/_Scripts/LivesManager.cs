@@ -62,6 +62,31 @@ public class LivesManager : MonoBehaviour
         }
     }
 
+    public void LoseTwoLives()
+    {
+        if (lives >= 2)
+        {
+            lives-=2;
+
+            UpdateLifeText();
+            SavePlayerLives(); // save to PlayerPrefs
+        }
+        else if (lives == 1)
+        {
+            PlayerPrefs.SetInt(livesKey, 0);
+            UpdateLifeText();
+            SavePlayerLives();
+            GameOver(); 
+            Debug.Log("Game Over");
+        }
+         
+        if (lives == 0)
+        {
+            GameOver();
+            Debug.Log("Game Over");
+        }
+
+    }
     public void GainLife()
     {
         if (lives < 10)

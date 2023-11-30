@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - SpikeTrap
   - GroundSpike
+  - SpikeEnemy
   layers:
   - Default
   - TransparentFX
