@@ -1,5 +1,17 @@
 fileFormatVersion: 2
+<<<<<<<< Updated upstream:Assets/Audio/Level2BackgroundMusic.mp3.meta
 guid: 6eed72ad12b1a436dac9a94f608e8363
+========
+guid: 52320e590bf774734a288886eba557ba
+labels:
+- Audio
+- Casual
+- Sound
+- SFX
+- Effect
+timeCreated: 1453238764
+licenseType: Store
+>>>>>>>> Stashed changes:Assets/Audio/SFXGainLife.wav.meta
 AudioImporter:
   externalObjects: {}
   serializedVersion: 7

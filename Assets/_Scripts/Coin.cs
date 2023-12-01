@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
+    public AudioSource SFXAudioSource;
+    public AudioClip collectSound;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") || other.CompareTag("Sword"))
@@ -14,6 +17,7 @@ public class Coin : MonoBehaviour
             if (coinManager != null)
             {
                 coinManager.CollectCoin();
+                SFXAudioSource.PlayOneShot(collectSound);
             }
 
             
@@ -30,6 +34,7 @@ public class Coin : MonoBehaviour
             if (coinManager != null)
             {
                 coinManager.CollectCoin();
+                SFXAudioSource.PlayOneShot(collectSound);
             }
 
 
