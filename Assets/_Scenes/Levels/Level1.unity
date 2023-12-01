@@ -45904,6 +45904,9 @@ MonoBehaviour:
   m_jumpForce: 6
   m_animator: {fileID: 2018040258}
   m_rigidBody: {fileID: 2018040254}
+  SFXAudioSource: {fileID: 106791531}
+  attack: {fileID: 8300000, guid: fe0b1f9aeb45b41b089175aeeabd5d95, type: 3}
+  getHit: {fileID: 8300000, guid: fce7866c2d6f3ef48ac94c58df453b3b, type: 3}
 --- !u!95 &2018040258 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7413344840680693326, guid: cc91c8ba8b9a34f4d99e70d721f60b64, type: 3}
