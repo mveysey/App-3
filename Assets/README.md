@@ -11,6 +11,10 @@ Skybox https://assetstore.unity.com/packages/2d/textures-materials/sky/free-hdr-
 
 SFX:
 Level1 Background: https://www.youtube.com/watch?v=ibx0bZ_b0fI
+Level2 Background: https://www.youtube.com/watch?v=_oeUeMLLEZ8&list=PLR_Wo4dgp0sjwLUBfuOdXDDE9SYGHRJsl&index=3
+
+Clear Level: https://www.youtube.com/watch?v=xdJI3u7kK_E&list=PLR_Wo4dgp0sjwLUBfuOdXDDE9SYGHRJsl&index=9
+Game Over: 
 
 UI:
 Canva 
