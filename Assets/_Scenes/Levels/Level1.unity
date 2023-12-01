@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.7302244, g: 0.7889752, b: 0.8498586, a: 1}
+  m_IndirectSpecularColor: {r: 0.73023987, g: 0.788982, b: 0.8498601, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -41829,6 +41829,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   livesText: {fileID: 2064866719}
+  SFXAudioSource: {fileID: 106791531}
+  gameOver: {fileID: 0}
+  getHit: {fileID: 8300000, guid: fce7866c2d6f3ef48ac94c58df453b3b, type: 3}
+  getLife: {fileID: 8300000, guid: 2667a0a008b044e218b63df62e2be749, type: 3}
 --- !u!114 &1828958452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45442,7 +45446,6 @@ MonoBehaviour:
   m_rigidBody: {fileID: 2018040254}
   SFXAudioSource: {fileID: 106791531}
   attack: {fileID: 8300000, guid: fe0b1f9aeb45b41b089175aeeabd5d95, type: 3}
-  getHit: {fileID: 8300000, guid: fce7866c2d6f3ef48ac94c58df453b3b, type: 3}
 --- !u!95 &2018040258 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7413344840680693326, guid: cc91c8ba8b9a34f4d99e70d721f60b64, type: 3}
@@ -45466,6 +45469,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   livesText: {fileID: 0}
+  SFXAudioSource: {fileID: 0}
+  gameOver: {fileID: 0}
+  getHit: {fileID: 0}
+  getLife: {fileID: 0}
 --- !u!1001 &2023793607
 PrefabInstance:
   m_ObjectHideFlags: 0
