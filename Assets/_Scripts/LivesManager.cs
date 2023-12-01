@@ -113,12 +113,17 @@ public class LivesManager : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    // call this code somewhere in the code for game ending 
+    
     public void GameOver()
     {
         Debug.Log("Game Over");
-       
-         ResetLives();
+
+        EndGame endGame = GetComponent<EndGame>();
+        if (endGame != null)
+        {
+            ResetLives(); // reset lives there 
+            endGame.LoadScene();
+        }
     }
 
 }
