@@ -7,7 +7,7 @@ public class Coin : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") || other.CompareTag("Sword"))
         {
             
             CoinManager coinManager = FindObjectOfType<CoinManager>();
@@ -17,6 +17,22 @@ public class Coin : MonoBehaviour
             }
 
             
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Sword"))
+        {
+
+            CoinManager coinManager = FindObjectOfType<CoinManager>();
+            if (coinManager != null)
+            {
+                coinManager.CollectCoin();
+            }
+
+
             Destroy(gameObject);
         }
     }

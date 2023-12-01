@@ -30,6 +30,7 @@ public class PlayerController: MonoBehaviour
 
     public AudioSource SFXAudioSource;
     public AudioClip attack;
+    public AudioClip jump;
 
     //AudioManager audioManager;
     //AudioSource m_AudioSource;
@@ -206,6 +207,7 @@ public class PlayerController: MonoBehaviour
 
         if (jumpCooldownOver && m_isGrounded && m_jumpInput)
         {
+            SFXAudioSource.PlayOneShot(jump);
             m_jumpTimeStamp = Time.time;
             m_rigidBody.AddForce(Vector3.up * m_jumpForce, ForceMode.Impulse);
         }

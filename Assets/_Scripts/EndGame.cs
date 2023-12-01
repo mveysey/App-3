@@ -25,7 +25,7 @@ public class EndGame : MonoBehaviour
 
      public void LoadScene ()
     {
-        SceneManager.LoadScene("TitleScreen");
+        SceneManager.LoadScene("GameOver");
     }
     
     public void QuitGame()

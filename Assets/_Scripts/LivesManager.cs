@@ -11,7 +11,6 @@ public class LivesManager : MonoBehaviour
     private string livesKey = "PlayerLives";
 
     public AudioSource SFXAudioSource;
-    public AudioClip gameOver;
     public AudioClip getHit;
     public AudioClip getLife;
 
@@ -126,8 +125,6 @@ public class LivesManager : MonoBehaviour
     {
         Debug.Log("Game Over");
 
-        SFXAudioSource.PlayOneShot(gameOver);
-
         EndGame endGame = GetComponent<EndGame>();
         if (endGame != null)
         {
@@ -135,5 +132,4 @@ public class LivesManager : MonoBehaviour
             endGame.LoadScene();
         }
     }
-
 }
