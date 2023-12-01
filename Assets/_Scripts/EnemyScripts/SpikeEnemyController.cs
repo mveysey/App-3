@@ -8,6 +8,9 @@ public class SpikeEnemyController : MonoBehaviour
     private int lives = 1;
     public Animator m_animator = null;
 
+    public AudioSource SFXAudioSource;
+    public AudioClip getHit;
+
     private void Awake()
     {
         if (!m_animator) { gameObject.GetComponent<Animator>(); }
@@ -18,6 +21,7 @@ public class SpikeEnemyController : MonoBehaviour
     {
         if (other.CompareTag("Sword") && lives > 0)
         {
+            SFXAudioSource.PlayOneShot(getHit);
             m_animator.SetTrigger("hit");
             m_animator.SetTrigger("dizzy");
 
