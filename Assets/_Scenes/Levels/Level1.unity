@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.730239, g: 0.78898084, b: 0.849859, a: 1}
+  m_IndirectSpecularColor: {r: 0.73023987, g: 0.788982, b: 0.8498601, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -41419,7 +41419,7 @@ MonoBehaviour:
   livesText: {fileID: 1382892058}
   SFXAudioSource: {fileID: 106791531}
   getHit: {fileID: 8300000, guid: fce7866c2d6f3ef48ac94c58df453b3b, type: 3}
-  getLife: {fileID: 8300000, guid: 52320e590bf774734a288886eba557ba, type: 3}
+  getLife: {fileID: 8300000, guid: d064585aadc254bf99b0b3ce7c10e373, type: 3}
 --- !u!114 &1783605282
 MonoBehaviour:
   m_ObjectHideFlags: 0
