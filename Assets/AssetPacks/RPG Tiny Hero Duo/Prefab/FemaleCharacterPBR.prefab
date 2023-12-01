@@ -2274,8 +2274,8 @@ GameObject:
   - component: {fileID: 7019920669011962644}
   - component: {fileID: 7413344840680693326}
   - component: {fileID: 6731808168271292841}
-  - component: {fileID: 5338415849858618867}
-  - component: {fileID: 6923051945139013988}
+  - component: {fileID: 572368000752092454}
+  - component: {fileID: 4193806860667000960}
   m_Layer: 0
   m_Name: FemaleCharacterPBR
   m_TagString: Player
@@ -2347,7 +2347,7 @@ CapsuleCollider:
   m_Height: 1.8330026
   m_Direction: 1
   m_Center: {x: -0.13811994, y: 0.8223989, z: 0.07147586}
---- !u!114 &5338415849858618867
+--- !u!114 &572368000752092454
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2362,11 +2362,11 @@ MonoBehaviour:
   m_moveSpeed: 3
   m_jumpForce: 6
   m_animator: {fileID: 7413344840680693326}
-  m_rigidBody: {fileID: 6923051945139013988}
+  m_rigidBody: {fileID: 4193806860667000960}
   SFXAudioSource: {fileID: 0}
   attack: {fileID: 8300000, guid: fe0b1f9aeb45b41b089175aeeabd5d95, type: 3}
   jump: {fileID: 8300000, guid: 2c5292ba5cf254919a6b9e2b18e04f49, type: 3}
---- !u!54 &6923051945139013988
+--- !u!54 &4193806860667000960
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
