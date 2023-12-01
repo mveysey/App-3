@@ -1,36 +1,46 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class AudioManager : MonoBehaviour
+public class BackgroundMusicController : MonoBehaviour
 {
-    [Header("Audio Source")]
-    [SerializeField] AudioSource musicSource;
-    [SerializeField] AudioSource SFXSource;
+    public AudioClip backgroundMusic;
+    private AudioSource audioSource;
 
-    [Header("Audio Clip")]
-    public AudioClip background;
-    public AudioClip death;
-    public AudioClip falling;
-    public AudioClip checkpoint;
-    public AudioClip walk;
-    public AudioClip jump;
-    public AudioClip attack;
-    public AudioClip hit;
-
-   /* private void Awake()
-    {
-        DontDestroyOnLoad(gameObject);
-    }*/
-    // Start is called before the first frame update
     private void Start()
     {
-       musicSource.clip = background;
-       musicSource.Play();
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.clip = backgroundMusic;
+
+        PlayBackgroundMusic();
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    public void PlaySFX(AudioClip clip)
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        SFXSource.PlayOneShot(clip);
+        if (scene.name == "Level1" || scene.name == "Level2" || scene.name == "Level3" || scene.name == "Level1Complete" || scene.name == "Level2Complete" || scene.name == "GameOver")
+        {
+            PlayBackgroundMusic();
+        }
+        else
+        {
+            StopBackgroundMusic();
+        }
+    }
+
+    private void PlayBackgroundMusic()
+    {
+        if (!audioSource.isPlaying)
+        {
+            audioSource.Play();
+        }
+    }
+
+    private void StopBackgroundMusic()
+    {
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
     }
 }

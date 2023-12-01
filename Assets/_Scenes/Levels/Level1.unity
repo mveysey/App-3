@@ -429,7 +429,7 @@ Transform:
   m_GameObject: {fileID: 21115699}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.92387956, z: -0.38268343, w: 0}
-  m_LocalPosition: {x: 0.1922648, y: 8.121831, z: 8.380877}
+  m_LocalPosition: {x: 0.1922648, y: 8.121832, z: 7.5008774}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2082,7 +2082,7 @@ PrefabInstance:
     - target: {fileID: 3965900713104045207, guid: 4eca7a8ef879cfb41b294a8c0d69ea58, type: 3}
       propertyPath: SFXAudioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 106791531}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3454,7 +3454,7 @@ PrefabInstance:
     - target: {fileID: 3965900713104045207, guid: 4eca7a8ef879cfb41b294a8c0d69ea58, type: 3}
       propertyPath: SFXAudioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 106791531}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5374,6 +5374,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 23730838014588458, guid: cdf0efc2fc33b6f4588aeb36dfc0dfb8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ca91f1a031a8ba4080fa6a8c8bb9e7a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5443,7 +5447,7 @@ PrefabInstance:
     - target: {fileID: 3965900713104045207, guid: 4eca7a8ef879cfb41b294a8c0d69ea58, type: 3}
       propertyPath: SFXAudioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 106791531}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5797,7 +5801,7 @@ PrefabInstance:
     - target: {fileID: 3965900713104045207, guid: 4eca7a8ef879cfb41b294a8c0d69ea58, type: 3}
       propertyPath: SFXAudioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 106791531}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6668,6 +6672,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 23730838014588458, guid: cdf0efc2fc33b6f4588aeb36dfc0dfb8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ca91f1a031a8ba4080fa6a8c8bb9e7a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6885,7 +6893,7 @@ PrefabInstance:
     - target: {fileID: 3965900713104045207, guid: 4eca7a8ef879cfb41b294a8c0d69ea58, type: 3}
       propertyPath: SFXAudioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 106791531}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9021,7 +9029,7 @@ PrefabInstance:
     - target: {fileID: 3965900713104045207, guid: 4eca7a8ef879cfb41b294a8c0d69ea58, type: 3}
       propertyPath: SFXAudioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 106791531}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13636,7 +13644,7 @@ PrefabInstance:
     - target: {fileID: 3965900713104045207, guid: 4eca7a8ef879cfb41b294a8c0d69ea58, type: 3}
       propertyPath: SFXAudioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 106791531}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14076,7 +14084,7 @@ PrefabInstance:
     - target: {fileID: 345009565859818502, guid: 0f6fbf6ba5b56aa4ba01adc51ab77ce6, type: 3}
       propertyPath: SFXAudioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 106791531}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14864,6 +14872,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 23730838014588458, guid: cdf0efc2fc33b6f4588aeb36dfc0dfb8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ca91f1a031a8ba4080fa6a8c8bb9e7a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16841,7 +16853,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 0.93267375, b: 0.7490566, a: 1}
   m_Intensity: 0.35
   m_Range: 10
   m_SpotAngle: 30
@@ -19666,6 +19678,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 23730838014588458, guid: cdf0efc2fc33b6f4588aeb36dfc0dfb8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ca91f1a031a8ba4080fa6a8c8bb9e7a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22683,7 +22699,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.92387956, z: -0.38268343, w: 0}
-  m_LocalPosition: {x: 0.1922648, y: 8.121831, z: 8.380877}
+  m_LocalPosition: {x: 0.1922648, y: 8.121832, z: 7.5008774}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23156,7 +23172,7 @@ PrefabInstance:
     - target: {fileID: 3965900713104045207, guid: 4eca7a8ef879cfb41b294a8c0d69ea58, type: 3}
       propertyPath: SFXAudioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 106791531}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23436,7 +23452,7 @@ PrefabInstance:
     - target: {fileID: 3965900713104045207, guid: 4eca7a8ef879cfb41b294a8c0d69ea58, type: 3}
       propertyPath: SFXAudioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 106791531}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24315,6 +24331,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 572368000752092454, guid: cc91c8ba8b9a34f4d99e70d721f60b64, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 572368000752092454, guid: cc91c8ba8b9a34f4d99e70d721f60b64, type: 3}
+      propertyPath: m_rigidBody
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 805512192915363792, guid: cc91c8ba8b9a34f4d99e70d721f60b64, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -24345,7 +24369,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7019920669011962644, guid: cc91c8ba8b9a34f4d99e70d721f60b64, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 8.58
+      value: 7.7
       objectReference: {fileID: 0}
     - target: {fileID: 7019920669011962644, guid: cc91c8ba8b9a34f4d99e70d721f60b64, type: 3}
       propertyPath: m_LocalRotation.w
@@ -24418,6 +24442,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 8131554236728607683, guid: cc91c8ba8b9a34f4d99e70d721f60b64, type: 3}
     - {fileID: 805512192915363792, guid: cc91c8ba8b9a34f4d99e70d721f60b64, type: 3}
+    - {fileID: 572368000752092454, guid: cc91c8ba8b9a34f4d99e70d721f60b64, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -25809,6 +25834,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 23730838014588458, guid: cdf0efc2fc33b6f4588aeb36dfc0dfb8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ca91f1a031a8ba4080fa6a8c8bb9e7a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27399,6 +27428,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 23730838014588458, guid: cdf0efc2fc33b6f4588aeb36dfc0dfb8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ca91f1a031a8ba4080fa6a8c8bb9e7a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28476,6 +28509,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 23730838014588458, guid: cdf0efc2fc33b6f4588aeb36dfc0dfb8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ca91f1a031a8ba4080fa6a8c8bb9e7a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31506,6 +31543,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 23730838014588458, guid: cdf0efc2fc33b6f4588aeb36dfc0dfb8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ca91f1a031a8ba4080fa6a8c8bb9e7a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32651,7 +32692,7 @@ PrefabInstance:
     - target: {fileID: 3965900713104045207, guid: 4eca7a8ef879cfb41b294a8c0d69ea58, type: 3}
       propertyPath: SFXAudioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 106791531}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32881,7 +32922,7 @@ PrefabInstance:
     - target: {fileID: 345009565859818502, guid: 0f6fbf6ba5b56aa4ba01adc51ab77ce6, type: 3}
       propertyPath: SFXAudioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 106791531}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34107,6 +34148,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 23730838014588458, guid: cdf0efc2fc33b6f4588aeb36dfc0dfb8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ca91f1a031a8ba4080fa6a8c8bb9e7a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -38001,7 +38046,7 @@ PrefabInstance:
     - target: {fileID: 3965900713104045207, guid: 4eca7a8ef879cfb41b294a8c0d69ea58, type: 3}
       propertyPath: SFXAudioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 106791531}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -38940,6 +38985,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 23730838014588458, guid: cdf0efc2fc33b6f4588aeb36dfc0dfb8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ca91f1a031a8ba4080fa6a8c8bb9e7a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -40333,6 +40382,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 23730838014588458, guid: cdf0efc2fc33b6f4588aeb36dfc0dfb8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ca91f1a031a8ba4080fa6a8c8bb9e7a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -40671,6 +40724,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
+    - target: {fileID: 23730838014588458, guid: cdf0efc2fc33b6f4588aeb36dfc0dfb8, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6ca91f1a031a8ba4080fa6a8c8bb9e7a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -40814,7 +40871,7 @@ PrefabInstance:
     - target: {fileID: 3965900713104045207, guid: 4eca7a8ef879cfb41b294a8c0d69ea58, type: 3}
       propertyPath: SFXAudioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 106791531}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41360,7 +41417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   livesText: {fileID: 1382892058}
-  SFXAudioSource: {fileID: 0}
+  SFXAudioSource: {fileID: 106791531}
   getHit: {fileID: 8300000, guid: fce7866c2d6f3ef48ac94c58df453b3b, type: 3}
   getLife: {fileID: 8300000, guid: 52320e590bf774734a288886eba557ba, type: 3}
 --- !u!114 &1783605282
@@ -42570,7 +42627,7 @@ PrefabInstance:
     - target: {fileID: 3965900713104045207, guid: 4eca7a8ef879cfb41b294a8c0d69ea58, type: 3}
       propertyPath: SFXAudioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 106791531}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -46319,7 +46376,7 @@ PrefabInstance:
     - target: {fileID: 3965900713104045207, guid: 4eca7a8ef879cfb41b294a8c0d69ea58, type: 3}
       propertyPath: SFXAudioSource
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 106791531}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
