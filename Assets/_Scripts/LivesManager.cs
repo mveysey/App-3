@@ -10,6 +10,11 @@ public class LivesManager : MonoBehaviour
 
     private string livesKey = "PlayerLives";
 
+    public AudioSource SFXAudioSource;
+    public AudioClip gameOver;
+    public AudioClip getHit;
+    public AudioClip getLife;
+
     private void Start()
     {
         LoadPlayerLives();
@@ -48,6 +53,7 @@ public class LivesManager : MonoBehaviour
     {
         if (lives > 0)
         {
+            SFXAudioSource.PlayOneShot(getHit);
             lives--;
 
             UpdateLifeText();
@@ -66,7 +72,8 @@ public class LivesManager : MonoBehaviour
     {
         if (lives >= 2)
         {
-            lives-=2;
+            SFXAudioSource.PlayOneShot(getHit);
+            lives -=2;
 
             UpdateLifeText();
             SavePlayerLives(); // save to PlayerPrefs
@@ -91,6 +98,7 @@ public class LivesManager : MonoBehaviour
     {
         if (lives < 10)
         {
+            SFXAudioSource.PlayOneShot(getLife);
             lives++;
 
             UpdateLifeText();
@@ -117,6 +125,8 @@ public class LivesManager : MonoBehaviour
     public void GameOver()
     {
         Debug.Log("Game Over");
+
+        SFXAudioSource.PlayOneShot(gameOver);
 
         EndGame endGame = GetComponent<EndGame>();
         if (endGame != null)

@@ -30,7 +30,6 @@ public class PlayerController: MonoBehaviour
 
     public AudioSource SFXAudioSource;
     public AudioClip attack;
-    public AudioClip getHit;
 
     //AudioManager audioManager;
     //AudioSource m_AudioSource;
@@ -61,7 +60,6 @@ public class PlayerController: MonoBehaviour
         // touch slime enemy loose 1 life
         if (collision.gameObject.CompareTag("SlimeEnemy"))
         {
-            SFXAudioSource.PlayOneShot(getHit);
             // find lives manager object in the game 
             LivesManager livesManager = FindObjectOfType<LivesManager>();
             if (livesManager != null)
