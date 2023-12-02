@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -5067,13 +5067,6 @@ MonoBehaviour:
     GateFit: 2
     FocusDistance: 10
     m_SensorSize: {x: 1, y: 1}
-    Iso: 200
-    ShutterSpeed: 0.005
-    Aperture: 16
-    BladeCount: 5
-    Curvature: {x: 2, y: 11}
-    BarrelClipping: 0.25
-    Anamorphism: 0
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -43171,8 +43164,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 451.60522, y: -71.128944}
-  m_SizeDelta: {x: 148.0012, y: 53.778}
+  m_AnchoredPosition: {x: 212.08633, y: -32.532}
+  m_SizeDelta: {x: 68.2627, y: 23.416}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1614519977
 MonoBehaviour:
@@ -52198,8 +52191,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11.7864, y: -71.129}
-  m_SizeDelta: {x: 159.0166, y: 53.778}
+  m_AnchoredPosition: {x: 3.5946, y: -32.802}
+  m_SizeDelta: {x: 78.4779, y: 22.8758}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1990393493
 MonoBehaviour:
@@ -53695,8 +53688,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -454, y: -71.129}
-  m_SizeDelta: {x: 148.0012, y: 53.778}
+  m_AnchoredPosition: {x: -212.8089, y: -33.307}
+  m_SizeDelta: {x: 69.6513, y: 23.8854}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2019953858
 MonoBehaviour:
