@@ -61,7 +61,7 @@ public class PlayerController: MonoBehaviour
         // touch slime enemy loose 1 life
         if (collision.gameObject.CompareTag("SlimeEnemy"))
         {
-            // find lives manager object in the game 
+            
             LivesManager livesManager = FindObjectOfType<LivesManager>();
             if (livesManager != null)
             {
@@ -72,7 +72,7 @@ public class PlayerController: MonoBehaviour
         // touch spike enemy looke 2 lives 
         if (collision.gameObject.CompareTag("SpikeEnemy"))
         {
-            // find lives manager object there 
+           
             LivesManager livesManager = FindObjectOfType<LivesManager>();
             if (livesManager != null)
             {

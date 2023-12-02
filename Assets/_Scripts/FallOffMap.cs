@@ -17,11 +17,11 @@ public class FallOffMap : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             SceneManager.LoadScene(currentScene.name);
-            // find lives manager object in the game 
+          
             LivesManager livesManager = FindObjectOfType<LivesManager>();
             if (livesManager != null)
             {
-                // loose live when falling off platform 
+                
                 livesManager.LoseLife();
             }
         }

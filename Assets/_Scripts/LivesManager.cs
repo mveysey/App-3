@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class LivesManager : MonoBehaviour
 {
     private int lives = 10;
-    public TextMeshProUGUI livesText; // reference to the UI text displaying lives
+    public TextMeshProUGUI livesText; 
 
     private string livesKey = "PlayerLives";
 
@@ -57,10 +57,10 @@ public class LivesManager : MonoBehaviour
             lives--;
 
             UpdateLifeText();
-            SavePlayerLives(); // save to PlayerPrefs
+            SavePlayerLives(); 
         }
 
-        // have another condition 
+       
         if (lives == 0)
         {
             GameOver();
@@ -76,7 +76,7 @@ public class LivesManager : MonoBehaviour
             lives -=2;
 
             UpdateLifeText();
-            SavePlayerLives(); // save to PlayerPrefs
+            SavePlayerLives(); 
         }
         else if (lives == 1)
         {
@@ -102,7 +102,7 @@ public class LivesManager : MonoBehaviour
             lives++;
 
             UpdateLifeText();
-            SavePlayerLives(); // save to PlayerPrefs
+            SavePlayerLives(); 
         }
     }
 
@@ -129,7 +129,7 @@ public class LivesManager : MonoBehaviour
         EndGame endGame = GetComponent<EndGame>();
         if (endGame != null)
         {
-            ResetLives(); // reset lives there 
+            ResetLives(); // reset lives
             SceneManager.LoadScene("GameOver");
         }
     }
